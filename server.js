@@ -30,6 +30,8 @@ mongoose.connect('mongodb://root:abc123@ds151108.mlab.com:51108/ecommerce', func
   }
 });
 
+//now knows that is for static files
+app.use(express.static(__dirname + '/public'));
 //add a middleware
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -41,31 +43,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 
+// requiring main route
+var mainRoutes = require('./routes/main');
+var userRoutes = require('./routes/user');
 
-//post request
-app.post('/create-user', function(req, res, next) {
-  var user = new User();
-
-  user.profile.name = req.body.name;
-  user.password = req.body.password;
-  user.email = req.body.email;
-
-  user.save(function(err) {
-    if (err) return next(err);
-
-    res.json('Successfully created a new user');
-
-  });
-
-});
-
-app.get('/', function(req, res) {
-  res.render('home');
-});
-
-app.get('/about', function(req, res) {
-  res.render('about');
-});
+app.use(mainRoutes);
+app.use(userRoutes);
 //run the server
 //adds validation to the server
 
