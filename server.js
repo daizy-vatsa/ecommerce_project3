@@ -19,6 +19,9 @@ var session =  require('express-session');
 var cookieParser =  require('cookie-parser');
 var flash =  require('express-flash');
 
+//require secret.js
+var secret = require('./config/secret');
+
 //require User modal
 
 var User = require('./models/user');
@@ -27,7 +30,7 @@ var User = require('./models/user');
 var app = express();
 
 //connect mongoose to the database
-mongoose.connect('mongodb://root:abc123@ds151108.mlab.com:51108/ecommerce', function(err) {
+mongoose.connect(secret.database, function(err) {
   if (err) {
     console.log(err);
   } else {
@@ -46,7 +49,7 @@ app.use(cookieParser());
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: "Tanu@!@!"
+  secret: secret.secretKey
 }));
 app.use(flash());
 //flash is dependent on session and cookie because
@@ -69,7 +72,7 @@ app.use(userRoutes);
 //adds validation to the server
 
 //callback function to run app smoothly
-app.listen(3000, function(err) {
+app.listen(secret.port, function(err) {
   if (err) throw err;
-  console.log("Server is Running on port 3000")
+  console.log("Server is Running on port " + secret.port);
 });
