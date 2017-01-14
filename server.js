@@ -14,6 +14,11 @@ var bodyParser = require('body-parser');
 var ejs = require('ejs');
 var engine = require('ejs-mate');
 
+//expressjs uses cookie to store a session id
+var session =  require('express-session');
+var cookieParser =  require('cookie-parser');
+var flash =  require('express-flash');
+
 //require User modal
 
 var User = require('./models/user');
@@ -36,6 +41,17 @@ app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+//it force session to be save
+app.use(cookieParser());
+app.use(session({
+  resave: true,
+  saveUninitialized: true,
+  secret: "Tanu@!@!"
+}));
+app.use(flash());
+//flash is dependent on session and cookie because
+//we want to save the flash message in the session
+//so that it can be use in amother request route
 
 //another middleware to use ejs
 //engine means what kind of engine you want to use
