@@ -1,6 +1,7 @@
 //require libraries first
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
+var crypto = require('crypto');
 //declare mongoose Schema
 var Schema = mongoose.Schema;
 
@@ -55,5 +56,15 @@ UserSchema.methods.comparePassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 }
 
-//export mongoose/ export all schema so everyfile can use schema
+//for profile avatar
+UserSchema.methods.gravatar = function(size) {
+  if (!this.size) size = 200;
+  // API for following website
+  if (!this.email) return 'https://gravatar.com/avatar/?s' + size + '&d=retro';
+  // md5 for uniqueness of the particular person
+  var md5 = crypto.createHash('md5').update(this.email).digest('hex');
+  return 'https://gravatar.com/avatar/' + md5 + '?s=' + size + '&d=retro';
+}
+
+
 module.exports = mongoose.model('User', UserSchema);

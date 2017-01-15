@@ -18,6 +18,11 @@ var engine = require('ejs-mate');
 var session =  require('express-session');
 var cookieParser =  require('cookie-parser');
 var flash =  require('express-flash');
+//require mongo connect
+// MongoStore is specifically to store sessions on server-side
+var MongoStore = require('connect-mongo/es5')(session);
+// require passport library
+var passport = require('passport');
 
 //require secret.js
 var secret = require('./config/secret');
@@ -49,9 +54,17 @@ app.use(cookieParser());
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: secret.secretKey
+  secret: secret.secretKey,
+  store: new MongoStore({ url: secret.database, autoReconnect: true})
 }));
 app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function(req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
 //flash is dependent on session and cookie because
 //we want to save the flash message in the session
 //so that it can be use in amother request route
