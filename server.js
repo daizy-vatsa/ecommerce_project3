@@ -31,6 +31,10 @@ var secret = require('./config/secret');
 
 var User = require('./models/user');
 
+//require category schema
+
+var Category = require('./models/category');
+
 //app is referring an express object
 var app = express();
 
@@ -65,6 +69,16 @@ app.use(function(req, res, next) {
   next();
 });
 
+//middleware for categories to find all the categories
+
+app.use(function(req, res, next) {
+  Category.find({}, function(err, categories) {
+    if (err) return next(err);
+    res.locals.categories = categories;
+    next();
+  });
+});
+
 //flash is dependent on session and cookie because
 //we want to save the flash message in the session
 //so that it can be use in amother request route
@@ -78,9 +92,11 @@ app.set('view engine', 'ejs');
 // requiring main route
 var mainRoutes = require('./routes/main');
 var userRoutes = require('./routes/user');
+var adminRoutes = require('./routes/admin');
 
 app.use(mainRoutes);
 app.use(userRoutes);
+app.use(adminRoutes);
 //run the server
 //adds validation to the server
 
