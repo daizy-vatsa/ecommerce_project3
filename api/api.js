@@ -9,7 +9,7 @@ var faker = require('faker');
 var Category = require('../models/category');
 var Product = require('../models/product');
 
-
+// search is a mongoosastic feature
 router.post('/search', function(req, res, next) {
   console.log(req.body.search_term);
   Product.search({
