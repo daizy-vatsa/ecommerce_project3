@@ -40,6 +40,31 @@ stream.on('error', function(err) {
   console.log(err);
 });
 
+//redirect the  user to get route of search url
+//go to the search route and dont forget to get the message
+//re.body.q. '/search?q="joker"' is equivalent to req.res.q(joker)
+router.post('/search', function(req, res, next) {
+  res.redirect('/search?q=' + req.body.q);
+});
+
+router.get('/search', function(req, res, next) {
+  if (req.query.q) {
+    Product.search({
+      query_string: { query: req.query.q}
+    }, function(err, results) {
+      results:
+      if (err) return next(err);
+      var data = results.hits.hits.map(function(hit) {
+        return hit;
+      });
+      res.render('main/search-result', {
+        query: req.query.q,
+        data: data
+      });
+    });
+  }
+});
+
 //router is sub path of certain route
 
 router.get('/', function(req, res) {
