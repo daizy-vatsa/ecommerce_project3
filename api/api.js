@@ -48,9 +48,3 @@ router.get('/:name', function(req, res, next) {
 });
 
 module.exports = router;
-
-
-
-
-
-})
