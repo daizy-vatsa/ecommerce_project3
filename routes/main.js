@@ -9,6 +9,45 @@ var Product = require('../models/product');
 
 //This code is to map b/w product database and elastic search replica set
 //so that it creates a bridge or a connection
+
+//PAGINATION
+
+//added pagination so that we dont need to render
+//data at once, it will cause prb to mongodb database
+
+//we use skip
+//skip will skip amount of documents
+
+//limit - how many to documents you want per documents
+//skip certain docs and always limit 9 documents per query
+
+//used Product.count, want to divide documnets divided by products per page
+// CLICK 1 , WE GO TO PAGE 1, CLICK 9 , WE WILL GO TO PAGE 9
+
+function paginate(req, res, next) {
+
+  // declare variable called perPage. it has 9 items per page
+  var perPage = 9;
+  var page = req.params.page;
+
+  Product
+  .find()
+  .skip ( perPage * page ) // 9 * 6 = 18
+  .limit( perPage )
+  .populate('category')
+  .exec(function(err, products) {
+    if (err) return next(err);
+    Product.count().exec(function(err, count) {
+    if (err) return next(err);
+    res.render('main/product-main', {
+      products: products,
+      pages: count / perPage
+    });
+  });
+  });
+
+}
+
 Product.createMapping(function(err, mapping) {
   if (err) {
     console.log("error creating mapping");
@@ -28,7 +67,7 @@ stream.on('data', function() {
   count++;
 });
 
-//close th data, count the entire document
+//close the data, count the entire document
 
 stream.on('close', function() {
   console.log("Indexed " + count + " documents");
@@ -67,8 +106,18 @@ router.get('/search', function(req, res, next) {
 
 //router is sub path of certain route
 
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
+
+  if (req.user) {
+  paginate(req, res, next)
+} else {
   res.render('main/home');
+}
+
+});
+
+router.get('/page/:page', function(req, res, next) {
+  paginate(req,res,next);
 });
 
 router.get('/about', function(req, res) {
