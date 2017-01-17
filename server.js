@@ -35,6 +35,9 @@ var User = require('./models/user');
 
 var Category = require('./models/category');
 
+//require middleware from middleware folder
+var cartLength = require('./middlewares/middlewares');
+
 //app is referring an express object
 var app = express();
 
@@ -68,6 +71,14 @@ app.use(function(req, res, next) {
   res.locals.user = req.user;
   next();
 });
+
+//middlewares
+app.use(function(middleware) {
+
+})
+
+
+
 
 //middleware for categories to find all the categories
 
