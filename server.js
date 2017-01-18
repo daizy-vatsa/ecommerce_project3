@@ -72,14 +72,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-//middlewares
-app.use(function(middleware) {
-
-})
-
-
-
-
+//middlewares for middlware folder
+app.use(cartLength);
 //middleware for categories to find all the categories
 
 app.use(function(req, res, next) {
