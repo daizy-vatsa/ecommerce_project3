@@ -6,7 +6,7 @@
 var router = require('express').Router();
 var User = require('../models/user');
 var Product = require('../models/product');
-
+var Cart = require('../models/cart');
 //This code is to map b/w product database and elastic search replica set
 //so that it creates a bridge or a connection
 
@@ -78,6 +78,21 @@ stream.on('close', function() {
 stream.on('error', function(err) {
   console.log(err);
 });
+
+// route for cart
+
+router.get('/cart', function(req, res, next) {
+  Cart
+  .findOne({ owner: req.user._id })
+  .populate('items.item')
+  .exec(function(err, foundCart) {
+    if (err) return next(err);
+    res.render('main/cart', {
+      foundCart: foundCart
+    });
+  });
+});
+
 
 router.post('/product/:product_id', function(req, res, next) {
   // first we find the owner of the cart and if found
