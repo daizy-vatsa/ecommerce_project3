@@ -79,6 +79,29 @@ stream.on('error', function(err) {
   console.log(err);
 });
 
+router.post('/product/:product_id', function(req, res, next) {
+  // first we find the owner of the cart and if found
+  //we will push all the items based on the req.values to the
+  // array of items
+    Cart.findOne({ owner: req.user._id }, function(err, cart) {
+        cart.items.push({
+          item: req.body.product_id,
+          price: parseFloat(req.body.priceValue),
+          quantity: parseInt(req.body.quantity)
+        });
+
+        // parse the value of req.body to the float and limit it to 2
+        //so that saving to the database wont cause problem
+        cart.total = (cart.total + parseFloat(req.body.priceValue)).toFixed(2);
+
+        // finally save it to the cart
+        cart.save(function(err) {
+          if (err) return next(err);
+          return res.redirect('/cart');
+        });
+      });
+   });
+
 //redirect the  user to get route of search url
 //go to the search route and dont forget to get the message
 //re.body.q. '/search?q="joker"' is equivalent to req.res.q(joker)
