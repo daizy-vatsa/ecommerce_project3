@@ -20,6 +20,7 @@ router.post('/login', passport.authenticate('local-login', {
   failureFlash: true
 }));
 
+// added a middleware thing from passport.js
 router.get('/profile', passportConf.isAuthenticated, function(req, res, next) {
   User
     .findOne({ _id: req.user._id })
