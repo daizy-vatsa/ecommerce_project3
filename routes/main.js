@@ -7,6 +7,7 @@ var router = require('express').Router();
 var User = require('../models/user');
 var Product = require('../models/product');
 var Cart = require('../models/cart');
+var async = require('async');
 // REQUIRE STRIPE LIBRARY
 var stripe = require('stripe') ('sk_test_gPOq20O01QRUNdQ2X5BBhsH5');
 //This code is to map b/w product database and elastic search replica set
@@ -210,21 +211,56 @@ router.get('/product/:id', function(req, res, next) {
 
 router.post('/payment', function(req, res, next) {
 
-  // first we get token from client side
   var stripeToken = req.body.stripeToken;
-  // multiply by 100 because stripe is in cents
   var currentCharges = Math.round(req.body.stripeMoney * 100);
-  // use stripe mehod to create customers
   stripe.customers.create({
     source: stripeToken,
   }).then(function(customer) {
     return stripe.charges.create({
-      amount: 'currentCharges',
+      amount: currentCharges,
       currency: 'usd',
-      // we want to passin customer id
       customer: customer.id
     });
+  }).then(function(charge) {
+    async.waterfall([
+      // in this function, first we will find the cart owner
+      function(callback) {
+        Cart.findOne({ owner: req.user._id }, function(err, cart) {
+          callback(err, cart);
+        });
+      },
+      // in this function, we will search for the login user
+      // loop entire cart and push
+      function(cart, callback) {
+        User.findOne({ _id: req.user._id }, function(err, user) {
+          if (user) {
+            for (var i = 0; i < cart.items.length; i++) {
+              user.history.push({
+                item: cart.items[i].item,
+                paid: cart.items[i].price
+              });
+            }
+          // save the user object
+            user.save(function(err, user) {
+              if (err) return next(err);
+              callback(err, user);
+            });
+          }
+        });
+      },
+      // check newly update user
+      function(user) {
+        Cart.update({ owner: user._id }, { $set: { items: [], total: 0 }}, function(err, updated) {
+          if (updated) {
+            // redirect user back to profile
+            res.redirect('/profile');
+          }
+        });
+      }
+    ]);
   });
+
+
 });
 
 module.exports = router;
