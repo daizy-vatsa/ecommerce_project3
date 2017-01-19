@@ -7,6 +7,8 @@ var router = require('express').Router();
 var User = require('../models/user');
 var Product = require('../models/product');
 var Cart = require('../models/cart');
+// REQUIRE STRIPE LIBRARY
+var stripe = require('stripe') ('sk_test_gPOq20O01QRUNdQ2X5BBhsH5');
 //This code is to map b/w product database and elastic search replica set
 //so that it creates a bridge or a connection
 
@@ -200,6 +202,27 @@ router.get('/product/:id', function(req, res, next) {
     if (err) return next(err);
     res.render('main/product', {
       product: product
+    });
+  });
+});
+
+// route fot stripe payments
+
+router.post('/payment', function(req, res, next) {
+
+  // first we get token from client side
+  var stripeToken = req.body.stripeToken;
+  // multiply by 100 because stripe is in cents
+  var currentCharges = Math.round(req.body.stripeMoney * 100);
+  // use stripe mehod to create customers
+  stripe.customers.create({
+    source: stripeToken,
+  }).then(function(customer) {
+    return stripe.charges.create({
+      amount: 'currentCharges',
+      currency: 'usd',
+      // we want to passin customer id
+      customer: customer.id
     });
   });
 });
