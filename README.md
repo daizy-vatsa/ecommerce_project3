@@ -1,10 +1,24 @@
 # Coder Factory Term 3 Project (Javascript)
 
 ### lapshop 
+![LOGO](/wireframes/Logomakr_22KQNN.png)
 
 A site that helps you find the good quality second hand Apple Laptops at the best prices in the market.
 
 # Live - Coming Soon….
+
+## Client Name
+Mathew
+MacShop, Elizabeth Street, Melbourne Central
+
+Client interaction
+
+Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
+
+1. Record all interactions with your client in a diary format.
+
+![MEETING](/wireframes/Meeting Agenda1.pages)
+
 
 ### Problem
 
@@ -46,7 +60,20 @@ COMING SOON…….
 
 Used Trello for plan and estimation
 
+### Designs and Sketches
+
 Trello Board Link https://trello.com/b/pGAZg3FG/project-3
+
+![TRELLO](wireframes/Screenshot 2017-01-23 21.51.38.png)
+
+#### Figma Design
+![TRELLO](wireframes/Screenshot_2017-01-12_10.48.24.png)
+
+#### Balsamic Sketch
+![TRELLO](wireframes/Screenshot_2017-01-12_10.51.26.png)
+
+#### Logo Design
+![LOGO](/wireframes/Logomakr_22KQNN.png)
 
 #### Tools Used
 
