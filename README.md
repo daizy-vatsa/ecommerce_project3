@@ -11,7 +11,7 @@ A site that helps you find the good quality second hand Apple Laptops at the bes
 Mathew
 MacShop, Elizabeth Street, Melbourne Central
 
-Client interaction
+## Client interaction
 
 Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
 
@@ -37,17 +37,37 @@ Demonstrate your ability to satisfy your client with the quality of your work an
 
 ![MEETING](/wireframes/m5.png)
 
-### Problem
+### Problem we are solving
 
 Buying second-hand Apple laptops online is always green, but it’s easy to be discouraged by the stories of broken laptops from eBay or Craigslist. Also, Not everyone can afford the high price of apple laptops specially students.Furthermore, there are very few online retailers that sell good quality laptops that give you assurance to return the products with easy money back guarantee.
 
-### Solution
+### Solution 
 
 Our application will be the best choice for the people struggling to buy good quality second hand Apple laptops at affordably less price than the market. This app will give them access to choose from various ranges of the bestselling apple laptops. Customers will find multiple payment methods to choose that includes visa, MasterCard, American Express and many more.
 
-### Setup on Local Machine!
+### Roles and Responsibilities of the Team
 
-COMING SOON…….
+## Tanu Sharma 
+- Managed the project
+- Done backend till user authentication 
+- Helped Farhan in front-end work
+- Managed project documentation and structure
+
+## Tanim Mahumud
+- Managed backend of the project
+- Responsible for connecting Backend to Front-end
+- Helped Farhan in front-end Designs
+
+## Farhan Bawa 
+- Managed front-end of the project
+- Promototed Design Ideas
+- Presentation 
+
+### Setup on Local Machine!
+- ```git clone``` https://github.com/tanu2626/ecommerce_project3.git
+- cd into that folder
+- npm install
+- npm start server.js
 
 ### Workflow diagram of the user journey/s
 
