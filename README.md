@@ -66,8 +66,8 @@ Our application will be the best choice for the people struggling to buy good qu
 ### Setup on Local Machine!
 - ```git clone``` https://github.com/tanu2626/ecommerce_project3.git
 - cd into that folder
-- npm install
-- npm start server.js
+- ```npm install```
+- ```npm start server.js```
 
 ### Workflow diagram of the user journey/s
 
