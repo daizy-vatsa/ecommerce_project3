@@ -17,8 +17,25 @@ Demonstrate your ability to satisfy your client with the quality of your work an
 
 1. Record all interactions with your client in a diary format.
 
-![MEETING](/wireframes/Meeting Agenda1.pages)
+##### First Meeting
 
+![MEETING](/wireframes/m1first.png)
+
+##### Second Meeting
+
+![MEETING](/wireframes/m2.png)
+
+##### Third Meeting
+
+![MEETING](/wireframes/m3.png)
+
+##### Fourth Meeting
+
+![MEETING](/wireframes/m4.png)
+
+##### Fifth Meeting
+
+![MEETING](/wireframes/m5.png)
 
 ### Problem
 
