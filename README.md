@@ -11,32 +11,6 @@ A site that helps you find the good quality second hand Apple Laptops at the bes
 Mathew
 MacShop, Elizabeth Street, Melbourne Central
 
-## Client interaction
-
-Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
-
-1. Record all interactions with your client in a diary format.
-
-##### First Meeting
-
-![MEETING](/wireframes/m1first.png)
-
-##### Second Meeting
-
-![MEETING](/wireframes/m2.png)
-
-##### Third Meeting
-
-![MEETING](/wireframes/m3.png)
-
-##### Fourth Meeting
-
-![MEETING](/wireframes/m4.png)
-
-##### Fifth Meeting
-
-![MEETING](/wireframes/m5.png)
-
 ### Problem we are solving
 
 Buying second-hand Apple laptops online is always green, but it’s easy to be discouraged by the stories of broken laptops from eBay or Craigslist. Also, Not everyone can afford the high price of apple laptops specially students.Furthermore, there are very few online retailers that sell good quality laptops that give you assurance to return the products with easy money back guarantee.
@@ -111,6 +85,32 @@ Trello Board Link https://trello.com/b/pGAZg3FG/project-3
 
 #### Logo Design
 ![LOGO](/wireframes/Logomakr_22KQNN.png)
+
+## Client interaction
+
+Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
+
+1. Record all interactions with your client in a diary format.
+
+##### First Meeting
+
+![MEETING](/wireframes/m1first.png)
+
+##### Second Meeting
+
+![MEETING](/wireframes/m2.png)
+
+##### Third Meeting
+
+![MEETING](/wireframes/m3.png)
+
+##### Fourth Meeting
+
+![MEETING](/wireframes/m4.png)
+
+##### Fifth Meeting
+
+![MEETING](/wireframes/m5.png)
 
 #### Tools Used
 
