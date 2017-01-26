@@ -142,6 +142,12 @@ Demonstrate your ability to satisfy your client with the quality of your work an
 * passport-local
 * stripe
 
+### Social Media Updates
+![SOCIALMEDIALINKS](/wireframes/sm1.png)
+![SOCIALMEDIALINKS](/wireframes/sm2.png)
+![SOCIALMEDIALINKS](/wireframes/sm3.png)
+![SOCIALMEDIALINKS](/wireframes/sm4.png)
+
 #### Deployment
 
 
