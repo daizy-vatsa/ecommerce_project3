@@ -1,6 +1,6 @@
 # Coder Factory Term 3 Project (Javascript)
 
-### lapshop 
+### lapshop
 ![LOGO](/wireframes/Logomakr_22KQNN.png)
 
 A site that helps you find the good quality second hand Apple Laptops at the best prices in the market.
@@ -9,21 +9,21 @@ A site that helps you find the good quality second hand Apple Laptops at the bes
 
 ## Client Name
 Mathew
-MacShop, Elizabeth Street, Melbourne Central
+MacCity, Elizabeth Street, Melbourne Central
 
 ### Problem we are solving
 
 Buying second-hand Apple laptops online is always green, but it’s easy to be discouraged by the stories of broken laptops from eBay or Craigslist. Also, Not everyone can afford the high price of apple laptops specially students.Furthermore, there are very few online retailers that sell good quality laptops that give you assurance to return the products with easy money back guarantee.
 
-### Solution 
+### Solution
 
 Our application will be the best choice for the people struggling to buy good quality second hand Apple laptops at affordably less price than the market. This app will give them access to choose from various ranges of the bestselling apple laptops. Customers will find multiple payment methods to choose that includes visa, MasterCard, American Express and many more.
 
 ### Roles and Responsibilities of the Team
 
-## Tanu Sharma 
+## Tanu Sharma
 - Managed the project
-- Done backend till user authentication 
+- Done backend till user authentication
 - Helped Farhan in front-end work
 - Managed project documentation and structure
 
@@ -32,10 +32,10 @@ Our application will be the best choice for the people struggling to buy good qu
 - Responsible for connecting Backend to Front-end
 - Helped Farhan in front-end Designs
 
-## Farhan Bawa 
+## Farhan Bawa
 - Managed front-end of the project
 - Promototed Design Ideas
-- Presentation 
+- Presentation
 
 ### Setup on Local Machine!
 - ```git clone``` https://github.com/tanu2626/ecommerce_project3.git
@@ -57,7 +57,7 @@ Our application will be the best choice for the people struggling to buy good qu
 * As a customer, I want to search products so that I can choose what products I want.
 * As a customer, I want to pay for the products I am buying so that I can able to purchase them.
 
-#### As a Admin, 
+#### As a Admin,
 
 * As a Admin, I want to login with my email address and password so that I can see every history and details related to the application.
 * As a Admin, I want to logout, so that no one can gain access to my account and the admin panel.
@@ -128,8 +128,8 @@ Demonstrate your ability to satisfy your client with the quality of your work an
 
 * async  
 * bcrypt-nodejs
-* body-parser 
-* connect-mongo 
+* body-parser
+* connect-mongo
 * cookie-parser
 * ejs-mate
 * express
@@ -197,13 +197,3 @@ Tools and methodologies
 4. Github. Demonstrate use of frequent commits, pull requests, documentation.
 5. Use Agile development methodologies.
 6. Provide evidence you have used code quality tools
-
-
-
-
-
-
-
-
-
-
