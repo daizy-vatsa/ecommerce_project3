@@ -168,7 +168,7 @@ Client interaction
 
 Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
 
-1.✔️  Record all interactions with your client in a diary format.
+1. ✔️  Record all interactions with your client in a diary format.
 2. ✔️ Plan information gathering activities to determine project requirements, constraints and risks
 3. ✔️ Develop project charter, including preliminary statement of project scope and obtain sign-off
 4. ✔️ Prepare project work breakdown, schedule and budget
