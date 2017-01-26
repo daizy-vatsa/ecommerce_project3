@@ -159,47 +159,48 @@ Demonstrate your ability to satisfy your client with the quality of your work an
 ✔️ = Done 😊 | ❌ = Not Done 😞 | ❎ = Kinda Done 😑
 #### Setting expectations with your clients
 
-1. When approaching your client, be upfront about this being a project you are doing as part of your Diploma.
-2. There is to be no expectations on you, the students, to deploy the application for use of the client. Make sure the client is aware of this and is agreed upon.
-3. There is to be no confidentiality agreement to be entered into.
+1. ✔️ When approaching your client, be upfront about this being a project you are doing as part of your Diploma.
+2. ✔️ There is to be no expectations on you, the students, to deploy the application for use of the client. Make sure the client is aware of this and is agreed upon.
+3. ✔️ There is to be no confidentiality agreement to be entered into.
 Deliverables
 
 Client interaction
 
 Demonstrate your ability to satisfy your client with the quality of your work and high level of service.
 
-1. Record all interactions with your client in a diary format.
-2. Plan information gathering activities to determine project requirements, constraints and risks
-3. Develop project charter, including preliminary statement of project scope and obtain sign-off
-4. Prepare project work breakdown, schedule and budget
-5. Compile project management plan documents as necessary to communicate the intended management strategy for the project and obtain sign-off
-6. Identify and select team members, and allocate roles and responsibilities, based on project solution requirements
-7. Determine training and support needs of team members
-8. Establish project team values and agreed behavioural standards with team members
-9. Monitor delivery and acceptance of assigned project team work activities and manage individuals
-10. Monitor and control project scope changes, risks and issues
-11. Manage system testing and hand over activities
-12. Prepare IT support plans and maintenance or support documents
-13. Obtain final project sign-off
-14. Conduct post project review
-15. Create a questionnaire for the client to ascertain the satisfaction with your product and service.
+1.✔️  Record all interactions with your client in a diary format.
+2. ✔️ Plan information gathering activities to determine project requirements, constraints and risks
+3. ✔️ Develop project charter, including preliminary statement of project scope and obtain sign-off
+4. ✔️ Prepare project work breakdown, schedule and budget
+5. ✔️ Compile project management plan documents as necessary to communicate the intended management strategy for the project and obtain sign-off
+6. ✔️ Identify and select team members, and allocate roles and responsibilities, based on project solution requirements
+7. ✔️ Determine training and support needs of team members
+8. ✔️ Establish project team values and agreed behavioural standards with team members
+9. ✔️ Monitor delivery and acceptance of assigned project team work activities and manage individuals
+10. ✔️ Monitor and control project scope changes, risks and issues
+11. ✔️ Manage system testing and hand over activities
+12. 😑 Prepare IT support plans and maintenance or support documents
+13. 😑Obtain final project sign-off
+14. 😑Conduct post project review
+15. 😞 Create a questionnaire for the client to ascertain the satisfaction with your product and service.
 Application Design
 
 Demonstrate your ability to break down the problem and design a solution.
 
-1. One page summary of your application including problem definition, solution.
-2. Determine the appropriate client technology, development tools, and platform for writing the UI
-3. Review the conceptual design with the client, and edit as required
-4. A workflow diagram of the user journey/s.
-5. Wireframes for at least 5 screens.
-6. User stories for the whole application.
-7. Entity Relationship Diagram (ERD).
-8. Project plan and effort estimation.
+1. ✔️One page summary of your application including problem definition, solution.
+2. ✔️Determine the appropriate client technology, development tools, and platform for writing the UI
+3. ✔️Review the conceptual design with the client, and edit as required
+4. 😑A workflow diagram of the user journey/s.
+5. ✔️Wireframes for at least 5 screens.
+6. ✔️User stories for the whole application.
+7. 😑Entity Relationship Diagram (ERD).
+8. ✔️Project plan and effort estimation.
+
 Tools and methodologies
 
-1. Trello or similar project management tool to be used to track progress of build.
-2. Show evidence of Slack conversations or use of other communication tools.
-3. Git
-4. Github. Demonstrate use of frequent commits, pull requests, documentation.
-5. Use Agile development methodologies.
-6. Provide evidence you have used code quality tools
+1. ✔️Trello or similar project management tool to be used to track progress of build.
+2. ✔️Show evidence of Slack conversations or use of other communication tools.
+3. ✔️Git
+4. ✔️Github. Demonstrate use of frequent commits, pull requests, documentation.
+5. ✔️Use Agile development methodologies.
+6. 😑Provide evidence you have used code quality tools
