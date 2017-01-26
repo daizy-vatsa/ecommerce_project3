@@ -1,6 +1,6 @@
 # Coder Factory Term 3 Project (Javascript)
 
-### lapshop
+### MACSECOND
 ![LOGO](/wireframes/newbanner.png)
 
 A site that helps you find the good quality second hand Apple Laptops at the best prices in the market.
